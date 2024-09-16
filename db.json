@@ -43,17 +43,6 @@
         "controlled"
       ],
       "correctIndex": 1
-    },
-    {
-      "prompt": "Define HTML",
-      "answers": [
-        "HTML",
-        "HYPER",
-        "PYHER",
-        "45"
-      ],
-      "correctIndex": 0,
-      "id": 7
     }
   ]
 }

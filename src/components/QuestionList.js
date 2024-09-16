@@ -3,6 +3,7 @@ import QuestionItem from "./QuestionItem";
 
 function QuestionList() {
   const [questions, setQuestions] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:4000/questions')
       .then(response => response.json())
@@ -19,6 +20,8 @@ function QuestionList() {
   };
 
   const handleUpdate = (id, correctIndex) => {
+    console.log(`Updating question ${id} with correctIndex: ${correctIndex}`);
+    
     fetch(`http://localhost:4000/questions/${id}`, {
       method: 'PATCH',
       headers: {
@@ -34,8 +37,8 @@ function QuestionList() {
       });
   };
 
-  const handleDropdownChange = (id, e) => {
-    handleUpdate(id, parseInt(e.target.value));
+  const handleDropdownChange = (id, correctIndex) => {
+    handleUpdate(id, correctIndex);
   };
 
   return (
