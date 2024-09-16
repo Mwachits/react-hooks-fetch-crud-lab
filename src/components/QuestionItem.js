@@ -14,7 +14,7 @@ function QuestionItem({ question, onDelete, onDropdownChange }) {
   };
 
   const handleDropdownChange = (e) => {
-    onDropdownChange(id, parseInt(e.target.value)); // Convert the value to integer
+    onDropdownChange(id, parseInt(e.target.value, 10)); // Ensure base 10
   };
 
   return (
